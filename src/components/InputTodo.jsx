@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-const InputTodo = ({ addTodoItem }) => {
+const InputTodo = ({ addTodoItem, setUpdate }) => {
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
 

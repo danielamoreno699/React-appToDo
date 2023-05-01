@@ -1,8 +1,10 @@
 import styles from '@/styles/TodoItem.module.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 
 const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate}) => {
+    const editInputRef = useRef(null);
+    //const [updateInput, setUpdateInput] = useState(itemProp.title);
     const [editing, setEditing] = useState(false);
 
   
@@ -13,6 +15,8 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate}) => {
 
       const handleUpdatedDone = (event) => {
         if (event.key === 'Enter') {
+            setUpdate(editInputRef.current.value, itemProp.id);
+        // setUpdate(updateInput, itemProp.id);
           setEditing(false);
         }
       };
@@ -46,14 +50,19 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate}) => {
          <button onClick={() => delTodo(itemProp.id)}>Delete</button>
          <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
+          {/* {updateInput} */}
         </span>
         </div>
         <input
             type="text"
-            value={itemProp.title}
+            ref={editInputRef}
+            defaultValue={itemProp.title}
+            // value={updateInput}
+            // value={itemProp.title}
             className={styles.textInput}
             style={editMode}
-            onChange={(e) => setUpdate(e.target.value, itemProp.id)}
+            // onChange={(e) => setUpdateInput(e.target.value)}
+            // onChange={(e) => setUpdate(e.target.value, itemProp.id)}
             onKeyDown={handleUpdatedDone}
     />
       </li>
