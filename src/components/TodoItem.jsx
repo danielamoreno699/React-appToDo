@@ -19,7 +19,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate}) => {
       const handleUpdatedDone = (event) => {
         if (event.key === 'Enter') {
             setUpdate(editInputRef.current.value, itemProp.id);
-        // setUpdate(updateInput, itemProp.id);
+   
           setEditing(false);
         }
       };

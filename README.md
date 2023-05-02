@@ -4,7 +4,7 @@
 
   
 
-  <h2><b>ToDo List App React</b></h2>
+  <h2><b>TODO List App React</b></h2>
 
 </div>
 
@@ -43,9 +43,10 @@ By building this application, using React.
 
 ### Key Features <a name="key-features"></a>
 
-- **[Its a simple design]**
-- **[its clear]**
-- **[its friendly]**
+- the user can add new items by clicking in the submit button or with the keydown event
+- The user can delete each item by clicking in the trash icon
+- The user can edit the existing item and replace it with a new one
+- The application uses local storage to save the respective items
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
