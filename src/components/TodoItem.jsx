@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from '@/styles/TodoItem.module.css';
 import { useState, useRef } from 'react';
 import { FaTrash } from "react-icons/fa";
@@ -60,7 +61,6 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate}) => {
         </button>
          <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
-          {/* {updateInput} */}
         </span>
         </div>
         <input
@@ -78,5 +78,16 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate}) => {
       </li>
     );
   };
+
+  TodoItem.propTypes = {
+    itemProp: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired
+    }),
+    handleChange: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired,
+    setUpdate: PropTypes.func.isRequired
+  }
   export default TodoItem;
   
