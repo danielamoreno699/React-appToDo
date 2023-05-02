@@ -28,10 +28,10 @@
 - [📝 License](#license)
 
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 todo list react vite <a name="about-project"></a>
 
 
-**Todo List app React** is an app that enables the user to add, delete and edit items. 
+**Todo List app React with VITE** is an app that enables the user to add, delete and edit items. 
 
 - add items
 - delete items
@@ -80,7 +80,7 @@ Clone this repository to your desired folder by running the following commands i
   npm install or npm i
 ```
 
-- Run an optimized build for prodction:
+- Run an optimized build for production:
 ```
   npm run build
 ```
